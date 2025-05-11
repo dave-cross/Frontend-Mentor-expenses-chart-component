@@ -216,7 +216,8 @@ meter:hover {
 }
 
 meter[data-vertical] {
-  writing-mode: sideways-lr;
+  writing-mode: vertical-lr;
+  direction: rtl;
   /* --meter-width: 100%; */
   --meter-height: var(--meter-vertical-height);
 }
