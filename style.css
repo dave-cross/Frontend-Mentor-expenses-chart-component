@@ -1,0 +1,170 @@
+:root {
+  /* Tier 1 */
+  --white: hsl(0, 100%, 100%);
+  --red-100: hsl(28, 65%, 92%);
+  --red-300: hsl(10, 100%, 76%);
+  --red-500: hsl(10, 79%, 65%);
+  --blue-200: hsl(186, 49%, 80%);
+  --blue-300: hsl(186, 34%, 65%);
+  --brown-400: hsl(27, 10%, 52%);
+  --brown-950: hsl(25, 47%, 15%);
+
+  --font-family: "DM Sans", sans-serif;
+
+  --font-size-48: 48px;
+  --font-size-32: 32px;
+  --font-size-30: 30px;
+  --font-size-24: 24px;
+  --font-size-18: 18px;
+  --font-size-15: 15px;
+  --font-size-12: 12px;
+
+  /* @link https://utopia.fyi/clamp/calculator?a=375,540,30—48|24—32|15—18|12—15&p=font-size */
+  --font-size-30-48: clamp(
+    var(--font-size-30),
+    -0.6818rem + 10.9091vw,
+    var(--font-size-48)
+  );
+  --font-size-24-32: clamp(
+    var(--font-size-24),
+    0.3636rem + 4.8485vw,
+    var(--font-size-32)
+  );
+  --font-size-15-18: clamp(
+    var(--font-size-15),
+    0.5114rem + 1.8182vw,
+    var(--font-size-18)
+  );
+  --font-size-12-15: clamp(
+    var(--font-size-12),
+    0.3239rem + 1.8182vw,
+    var(--font-size-15)
+  );
+
+  --font-weight-700: 700; /* could be 600 */
+  --font-weight-400: 400;
+
+  --space-50: 4px;
+  --space-100: 8px;
+  --space-150: 12px;
+  --space-200: 16px;
+  --space-250: 20px;
+  --space-300: 24px;
+  --space-350: 28px;
+  --space-400: 32px;
+  --space-500: 40px;
+  --space-650: 52px;
+
+  --space-225: 18px;
+  --space-825: 66px;
+
+  /* @link https://utopia.fyi/clamp/calculator?a=375,540,20—40|24—32|24—40|52—66|20—28|16—24|4—8&p=spacing */
+  --spacing-52-66: clamp(
+    var(--space-650),
+    1.2614rem + 8.4848vw,
+    var(--space-825)
+  );
+  --spacing-24-40: clamp(
+    var(--space-300),
+    -0.7727rem + 9.697vw,
+    var(--space-500)
+  );
+  --spacing-24-32: clamp(
+    var(--space-300),
+    0.3636rem + 4.8485vw,
+    var(--space-400)
+  );
+  --spacing-20-40: clamp(
+    var(--space-250),
+    -1.5909rem + 12.1212vw,
+    var(--space-500)
+  );
+  --spacing-20-28: clamp(
+    var(--space-250),
+    0.1136rem + 4.8485vw,
+    var(--space-350)
+  );
+  --spacing-16-24: clamp(
+    var(--space-200),
+    -0.1364rem + 4.8485vw,
+    var(--space-300)
+  );
+  --spacing-4-8: clamp(
+    var(--space-50),
+    -0.3182rem + 2.4242vw,
+    var(--space-100)
+  );
+
+  --radius-3: 3px;
+  --radius-5: 5px;
+  --radius-10: 10px;
+  --radius-20: 20px;
+
+  /* @link https://utopia.fyi/clamp/calculator?a=375,540,10—20|3—5&p=radius */
+  --radius-10-20: clamp(
+    var(--radius-10),
+    -0.7955rem + 6.0606vw,
+    var(--radius-20)
+  );
+  --radius-3-5: clamp(var(--radius-3), -0.0966rem + 1.2121vw, var(--radius-5));
+
+  /* Tier 2 */
+
+  --color-background-default: var(--red-100);
+  --color-background-white: var(--white);
+  --color-background-primary: var(--red-500);
+  --color-background-primary-hover: var(--red-300);
+  --color-background-secondary: var(--blue-300);
+  --color-background-secondary-hover: var(--blue-200);
+  --color-background-tertiary: var(--brown-950);
+  --color-background-hr: var(--red-100);
+
+  --color-content-default: var(--brown-400);
+  --color-content-dark: var(--brown-950);
+  --color-content-knockout: var(--white);
+
+  --typography-heading-xl: var(--font-weight-700) var(--font-size-30-48)
+    var(--font-family);
+  --typography-heading-lg: var(--font-weight-700) var(--font-size-24-32)
+    var(--font-family);
+  --typography-body: var(--font-weight-400) var(--font-size-15-18)
+    var(--font-family);
+  --typography-body-bold: var(--font-weight-700) var(--font-size-15-18)
+    var(--font-family);
+  --typography-caption: var(--font-weight-400) var(--font-size-12-15)
+    var(--font-family);
+
+  --radius-lg: var(--radius-10-20);
+  --radius-sm: var(--radius-3-5);
+
+  --max-width: 540px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-background-default);
+  color: var(--color-content-default);
+  font: var(--typography-body);
+}
+
+h2 {
+  font: var(--typography-heading-lg);
+  color: var(--color-content-dark);
+}
+
+strong {
+  color: var(--color-content-dark);
+}
+
+hr {
+  background-color: var(--color-background-hr);
+  /* background-color: firebrick; */
+  border: 0;
+  border-radius: 1px;
+  height: 2px;
+}
