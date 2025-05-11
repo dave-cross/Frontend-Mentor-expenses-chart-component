@@ -138,6 +138,7 @@
   --radius-sm: var(--radius-3-5);
 
   --max-width: 540px;
+  --meter-vertical-height: 150px;
 }
 
 * {
@@ -167,6 +168,57 @@ hr {
   border: 0;
   border-radius: 1px;
   height: 2px;
+}
+
+meter {
+  --_meter-radius: var(--meter-radius, 5px);
+  --_meter-width: var(--meter-width, 100%);
+  --_meter-height: var(--meter-height, 40px);
+  --_meter-background: var(--meter-background, transparent);
+  --_meter-optimum-color: var(
+    --meter-optimum-color,
+    var(--color-background-primary)
+  );
+  width: var(--_meter-width);
+  height: var(--_meter-height);
+  border-radius: var(--_meter-radius);
+
+  background: var(--_meter-background);
+}
+
+/* Need this to account for Chrome making it a CSS Grid */
+meter::-webkit-meter-inner-element {
+  display: block;
+}
+
+/* Deprecated, but no replacement yet */
+meter::-webkit-meter-bar {
+  background: var(--_meter-background);
+  border-radius: var(--_meter-radius);
+}
+
+meter::-webkit-meter-optimum-value {
+  background: var(--_meter-optimum-color);
+  border-radius: var(--_meter-radius);
+}
+
+meter:-moz-meter-optimum::-moz-meter-bar {
+  background: var(--_meter-optimum-color);
+  border-radius: var(--_meter-radius);
+}
+
+meter:hover {
+  --_meter-optimum-color-hover: var(
+    --meter-optimum-color-hover,
+    var(--color-background-primary-hover)
+  );
+  --meter-optimum-color: var(--_meter-optimum-color-hover);
+}
+
+meter[data-vertical] {
+  writing-mode: sideways-lr;
+  /* --meter-width: 100%; */
+  --meter-height: var(--meter-vertical-height);
 }
 
 .flow > * + * {
@@ -257,4 +309,50 @@ hr {
   > * {
     display: block;
   }
+}
+
+.meters {
+  --flow-space: var(--spacing-52-66);
+  font: var(--typography-caption);
+  text-transform: lowercase;
+  display: flex;
+  gap: 15px;
+  text-align: center;
+
+  > * {
+    flex: 1 1 35px;
+  }
+}
+
+.meter {
+  position: relative;
+  label {
+    display: block;
+    margin-block-start: 4px;
+    > span {
+      display: none;
+      background-color: var(--color-background-tertiary);
+      border-radius: var(--radius-3-5);
+      color: var(--color-content-knockout);
+      font: var(--typography-body-bold);
+      padding: var(--space-100);
+      position: absolute;
+      bottom: calc(
+        (var(--value) / var(--max) * var(--meter-vertical-height)) + 30px
+      );
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &:hover {
+    span {
+      display: block;
+    }
+  }
+}
+
+.meter[data-current-day] {
+  --meter-optimum-color: var(--color-background-secondary);
+  --meter-optimum-color-hover: var(--color-background-secondary-hover);
 }
