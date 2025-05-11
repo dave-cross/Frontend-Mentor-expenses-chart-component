@@ -202,3 +202,59 @@ hr {
   padding: var(--space-200)
     max(var(--space-200), calc(50% - var(--_max-width) / 2));
 }
+
+.expenses {
+  --flow-space: var(--spacing-16-24);
+  width: 100%;
+}
+
+.expenses__balance {
+  --flow-space: var(--spacing-4-8);
+  background-color: var(--color-background-primary);
+  color: var(--color-content-knockout);
+  border-radius: var(--radius-10-20);
+  padding-inline: var(--spacing-20-40);
+  padding-block: var(--spacing-20-28);
+
+  h2 {
+    color: inherit;
+    font: var(--typography-body);
+  }
+
+  data {
+    font: var(--typography-heading-lg);
+    display: block;
+  }
+}
+
+.expenses__main {
+  background-color: var(--color-background-white);
+  border-radius: var(--radius-10-20);
+  padding-inline: var(--spacing-20-40);
+  padding-block-start: var(--spacing-24-32);
+  padding-block-end: var(--spacing-24-40);
+  > * {
+    --flow-space: var(--spacing-24-32);
+  }
+}
+
+.expenses__month {
+  --repel-space: 0 var(--space-300);
+  h2 {
+    font: var(--typography-body);
+    color: var(--color-content-default);
+  }
+}
+
+.expenses__month-total {
+  font: var(--typography-heading-xl);
+  color: var(--color-content-dark);
+}
+
+.expenses__month-prev {
+  text-align: right;
+
+  > * {
+    display: block;
+  }
+}
