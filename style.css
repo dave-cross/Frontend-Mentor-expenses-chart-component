@@ -184,6 +184,7 @@ meter {
   height: var(--_meter-height);
   border-radius: var(--_meter-radius);
   border: 0;
+  box-shadow: none;
 
   background: var(--_meter-background);
 }
@@ -192,6 +193,7 @@ meter {
 meter::-webkit-meter-inner-element {
   display: block;
   border: 0;
+  box-shadow: none;
 }
 
 /* Deprecated, but no replacement yet */
