@@ -180,6 +180,7 @@ meter {
     --meter-optimum-color,
     var(--color-background-primary)
   );
+  appearance: none;
   width: var(--_meter-width);
   height: var(--_meter-height);
   border-radius: var(--_meter-radius);
