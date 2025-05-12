@@ -184,9 +184,8 @@ meter {
   width: var(--_meter-width);
   height: var(--_meter-height);
   border-radius: var(--_meter-radius);
-  border: 0;
-  outline: 0;
-  box-shadow: none;
+  /* border: 0;
+  box-shadow: none; */
 
   background: var(--_meter-background);
 }
@@ -194,18 +193,16 @@ meter {
 /* Need this to account for Chrome making it a CSS Grid */
 meter::-webkit-meter-inner-element {
   display: block;
-  border: 0;
-  box-shadow: none;
-  outline: 0;
+  /* border: 0;
+  box-shadow: none; */
 }
 
 /* Deprecated, but no replacement yet */
 meter::-webkit-meter-bar {
   background: var(--_meter-background);
   border-radius: var(--_meter-radius);
-  border: 0;
+  /* border: 0; */
   box-shadow: none;
-  outline: 0;
 }
 
 meter::-webkit-meter-optimum-value {
