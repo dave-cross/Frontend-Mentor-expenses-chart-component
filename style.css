@@ -180,11 +180,12 @@ meter {
     --meter-optimum-color,
     var(--color-background-primary)
   );
-  appearance: none;
+  /* appearance: none; */
   width: var(--_meter-width);
   height: var(--_meter-height);
   border-radius: var(--_meter-radius);
   border: 0;
+  outline: 0;
   box-shadow: none;
 
   background: var(--_meter-background);
@@ -195,6 +196,7 @@ meter::-webkit-meter-inner-element {
   display: block;
   border: 0;
   box-shadow: none;
+  outline: 0;
 }
 
 /* Deprecated, but no replacement yet */
