@@ -1,7 +1,8 @@
 :root {
   /* Tier 1 */
   --white: hsl(0, 100%, 100%);
-  --red-100: hsl(28, 65%, 92%);
+  --orange-100: hsl(30, 100%, 98%);
+  --orange-200: hsl(28, 65%, 92%);
   --red-300: hsl(10, 100%, 76%);
   --red-500: hsl(10, 79%, 65%);
   --blue-200: hsl(186, 49%, 80%);
@@ -110,14 +111,14 @@
 
   /* Tier 2 */
 
-  --color-background-default: var(--red-100);
-  --color-background-white: var(--white);
+  --color-background-default: var(--orange-200);
+  --color-background-card: var(--orange-100);
   --color-background-primary: var(--red-500);
   --color-background-primary-hover: var(--red-300);
   --color-background-secondary: var(--blue-300);
   --color-background-secondary-hover: var(--blue-200);
   --color-background-tertiary: var(--brown-950);
-  --color-background-hr: var(--red-100);
+  --color-background-hr: var(--orange-200);
 
   --color-content-default: var(--brown-400);
   --color-content-dark: var(--brown-950);
@@ -281,7 +282,7 @@ meter[data-vertical] {
 }
 
 .expenses__main {
-  background-color: var(--color-background-white);
+  background-color: var(--color-background-card);
   border-radius: var(--radius-10-20);
   padding-inline: var(--spacing-20-40);
   padding-block-start: var(--spacing-24-32);
