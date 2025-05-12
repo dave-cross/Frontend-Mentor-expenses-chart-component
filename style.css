@@ -122,7 +122,7 @@
 
   --color-content-default: var(--brown-400);
   --color-content-dark: var(--brown-950);
-  --color-content-knockout: var(--white);
+  --color-content-knockout: var(--orange-100);
 
   --typography-heading-xl: var(--font-weight-700) var(--font-size-30-48)
     var(--font-family);
