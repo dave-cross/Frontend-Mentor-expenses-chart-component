@@ -203,6 +203,9 @@ meter::-webkit-meter-inner-element {
 meter::-webkit-meter-bar {
   background: var(--_meter-background);
   border-radius: var(--_meter-radius);
+  border: 0;
+  box-shadow: none;
+  outline: 0;
 }
 
 meter::-webkit-meter-optimum-value {
